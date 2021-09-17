@@ -25,16 +25,47 @@ Demonstrate your understanding of this week's concepts by answering the followin
 Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read.
 
 1. Explain the differences between `.map`, `.reduce` and `.filter` and describe a use case for each. 
+    - .map() creates a new array populated with the results of the callback function, passed as one it's arguments, being called on every
+        element of a specified array. You would use this when needing to take the information stored in one array and create a new array
+        from the results of passing the original array elements through another function.
+
+    - .reduce() collects the values of each individual element in an array, and returns either the sum or the product of the array elements
+        as a single value. You could use this to find the average age of an array of people.
+    
+    - .filter() returns an array of boolean values that come from testing the elements of a separate array. You could use this to check
+        specific conditions needed of an array's elements.
 
 2. Explain the difference between a callback and a higher order function.
 
+    - Callback functions - a function that is passed into another function as an argument.
+
+    - Higher Order Function - a function that receives another function as one of it's arguments. 
+
 3. Explain what a closure is.
 
-Closure occurs when a function reaches beyond its scope to obtain the value of a variable
+    - Closure occurs when a function reaches beyond its scope to obtain the value of a variable
 
 4. Describe the four principles of the 'this' keyword.
 
+    - Window binding: This is what gives an object its context. W/out context, the 'this' keyword would simply refer to the entirety of 
+       the javaScript code.
+
+    - Implicit binding: Refers to the properties of an object using dot notation. When dot notation is being used, 'this' refers to whatever
+       is to the left of the dot.
+
+    - Explicit binding: directly tells a function it's context by using .apply, .call, or .bind.
+        .apply - immediately invokes the function you call it on, and allows you to pass arguments
+          to functions as arrays.
+
+        .call - allows you to pass individual arguments to a function to use as 'this'.
+
+        .bind - returns a copy of the function called on that's brand new, and can be invoked at a later time. Arguments are passed 
+          one at time this way. 
+
 5. Why do we need super() in an extended class?
+
+    - The super() method is what allows a child class to access the properties and functions of the parent class. Extends and super take the
+        place of the of 'object.create' and 'parent.call'.
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 
