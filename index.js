@@ -17,7 +17,7 @@ myFunction();
 
 //🚀🚀🚀 ⬇️ 📝 Explanation ⬇️ 📝 🚀🚀🚀: 
 // This is an example of closure. The nestedFunction() and the variable 'internal' are both nested inside  myFunction(), and this allows
-// the inner function (nestedFunction()) to reach beyond its own scope and retrieve variables declared in outer function.
+// the inner function (nestedFunction()) to reach beyond its own scope and retrieve variables declared in the outer function.
 
 
 
@@ -29,10 +29,13 @@ myFunction();
     
 For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you may use a for loop for this function if you wish */
 
-function summation(/*Your Code Here*/) {
-  /*Your Code Here*/
-
+function summation(num) {
+  let counter = 0;
+  for(let i = 0; i < num ; i++){
+      counter += (i + 1);    
   }
+  return counter;
+}
  
 
 // 🦁🦁🦁 Topic 2: ADVANCED Array Methods 🦁🦁🦁
