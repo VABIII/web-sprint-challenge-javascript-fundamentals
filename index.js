@@ -16,7 +16,8 @@ function myFunction() {
 myFunction();
 
 //🚀🚀🚀 ⬇️ 📝 Explanation ⬇️ 📝 🚀🚀🚀: 
-
+// This is an example of closure. The nestedFunction() and the variable 'internal' are both nested inside  myFunction(), and this allows
+// the inner function (nestedFunction()) to reach beyond its own scope and retrieve variables declared in outer function.
 
 
 
