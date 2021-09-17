@@ -2,6 +2,8 @@
 /* 🚀🚀🚀🤓 Task 1: 🤓🚀🚀🚀 
 Study the code below and explain in your own words why nested function can access the variable internal. */
 
+const { isTemplateElement } = require("@babel/types");
+
 const external = "I'm outside the function";
 
 function myFunction() {
@@ -60,8 +62,14 @@ const zooAnimals = [
   displayNames will be an array of strings, and each string should follow this pattern: "name: {name}, scientific: {scientific name}"
   */
 
-  function animalNames(/*Your Code Here*/){
-    /*Your Code Here*/
+  function animalNames(arr){
+    let displayNames = [];
+    arr.forEach(function(arr){
+      let name1 = arr.animal_name;
+      let name2 = arr.scientific_name;
+      displayNames.push(`name: ${name1}, scientific: ${name2}`); 
+    }); 
+    return displayNames; 
   }
   
 
@@ -71,18 +79,23 @@ const zooAnimals = [
   For example: ['jackal, asiatic', .....]
   */
 
-  function lowerCaseNames(/*Your Code Here*/){
-    /*Your Code Here*/
+  function lowerCaseNames(arr){
+    const lower = arr.map(function(arr){
+      return arr.animal_name.toLowerCase();
+    });
+       return lower;
   }
-  
-  
+
   /* 🦁🦁🦁 Request 3: .filter() 🦁🦁🦁
   The zoo is concerned about animals with a lower population count. 
   Using lowPopulationAnimals use .filter() to create a new array of objects which contains only the animals with a population of less than 5.
   */
 
-  function lowPopulationAnimals(/*Your Code Here*/){
-    /*Your Code Here*/
+  function lowPopulationAnimals(arr){
+    const new_arr = arr.filter(function(arr){
+      return arr.population < 5;
+    });
+    return new_arr;
   }
   
 
@@ -92,8 +105,11 @@ const zooAnimals = [
   Remember the reduce method takes two arguments: a callback (which itself takes two args - the accumulator and the item), and an initial value for the count.
   */
 
-  function USApop(/*Your Code Here*/){
-    /*Your Code Here*/
+  function USApop(arr){
+    const new_arr = arr.reduce(function(acc, item){
+      return acc + item.population; 
+    }, 0);
+    return new_arr;
   }
   
   
